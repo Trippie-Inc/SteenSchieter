@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
                 Instantiate(hazard, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
                 if (gameOver) {
-                    restartText.text = "Press 'R' to Restart!";
+                    restartText.text = "Druk: 'R' om opniew te spelen.";
                     redLine.GetComponent<Image>().color = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f);
                     restart = true;
                     break;
@@ -84,7 +84,7 @@ public class GameController : MonoBehaviour
         }
     }
     public void GameOver() {
-        gameOverText.text = "Game Over!";
+        gameOverText.text = "Helaas, Game Over!";
         gameOver = true;
     }
 }
